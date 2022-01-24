@@ -15,8 +15,7 @@
         else if ([3, 10].includes(noteNum % 12)) bias = keyWidth / 12;
     }
 
-    function keyPressed(e) {
-        if (e?.buttons === 0) return;
+    function keyPressed() {
         if (pressed) return;
         dispatch("noteon", noteNum);
         pressed = true;
@@ -37,10 +36,14 @@
     draggable="false"
     on:mousedown|preventDefault={keyPressed}
     on:mouseup|preventDefault={keyReleased}
-    on:mouseenter={keyPressed}
-    on:mouseleave={keyReleased}
-    on:touchstart|preventDefault={keyPressed}
-    on:touchend|preventDefault={keyReleased}
+    on:mouseenter={(e) => {
+        if (e.buttons) keyPressed();
+    }}
+    on:mouseleave={(e) => {
+        if (e.buttons) keyReleased();
+    }}
+    on:touchstart={keyPressed}
+    on:touchend={keyReleased}
 />
 
 <style>
