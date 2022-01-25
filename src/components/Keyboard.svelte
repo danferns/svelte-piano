@@ -1,6 +1,7 @@
 <script>
     export let octaves = 2;
     export let middleC = 60;
+    export let keysPressed = [];
 
     import Key from "./Key.svelte";
     let keys;
@@ -13,7 +14,7 @@
 <div class="keyboard">
     <div>
         {#each keys as note}
-            <Key noteNum={note} on:noteon on:noteoff />
+            <Key noteNum={note} on:noteon on:noteoff pressed={keysPressed.includes(note)}/>
         {/each}
     </div>
 </div>
