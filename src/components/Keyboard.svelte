@@ -10,16 +10,22 @@
     );
 </script>
 
-<div>
-    {#each keys as note}
-        <Key noteNum={note} on:noteon on:noteoff />
-    {/each}
+<div class="keyboard">
+    <div>
+        {#each keys as note}
+            <Key noteNum={note} on:noteon on:noteoff />
+        {/each}
+    </div>
 </div>
 
 <style>
-    div {
+    .keyboard {
         display: flex;
         justify-content: center;
+    }
+
+    .keyboard > div {
+        display: flex;
         overflow: auto;
         padding: 8px;
         height: 192px;
