@@ -42,8 +42,8 @@
     on:mouseleave={(e) => {
         if (e.buttons) keyReleased();
     }}
-    on:touchstart={keyPressed}
-    on:touchend={keyReleased}
+    on:touchstart|preventDefault={keyPressed}
+    on:touchend|preventDefault={keyReleased}
 />
 
 <style>
