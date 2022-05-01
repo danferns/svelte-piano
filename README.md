@@ -6,7 +6,9 @@ This is a minimal piano interface built with Svelte.
 
 ## Demo
 
-You can play around with the code on the [Svelte REPL](https://svelte.dev/repl/d0db1849a7f24d22a8dcc5b5a1a2b1bf?version=3.46.2).
+You can play around with the code on the [Svelte REPL](https://svelte.dev/repl/d0db1849a7f24d22a8dcc5b5a1a2b1bf?version=3.46.2). 
+
+For a more complete demo, you can also check out [@oscarhermoso](https://github.com/oscarhermoso)'s fork featuring support for external MIDI devices [here](https://github.com/oscarhermoso/svelte-piano).
 
 ## Features
 
