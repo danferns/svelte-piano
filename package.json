@@ -9,7 +9,7 @@
     "test": "web-test-runner \"src/**/*.test.js\""
   },
   "dependencies": {
-    "svelte": "^3.37.0"
+    "svelte": "^3.49.0"
   },
   "devDependencies": {
     "@snowpack/plugin-dotenv": "^2.1.0",
